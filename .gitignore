@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.qodo/
+*.log
+
+5 - FIGURAS/2 - ARTIGO CRESCIMENTO VEGETAL/Figura 2.ai
