@@ -16,4 +16,8 @@ Tabela A1. Comprimento do hipocótilo, radícula e porcentagem de inibição de 
 | N4 (resíduos e fibras) | 21.223 ± 4.848 b | 19.498 ± 7.146 a | 98.897 ± 47.200 a | 28.101 ± 46.950 a |
 | Controle | 15.121 ± 2.685 c | 12.857 ± 2.691 b | - | 0.000 ± 0.000 b |
 | η² parcial | 0.684 | 0.226 | 0.617 | 0.183 |
+| Cohen's d (N1 vs Control) | 3.625 | 0.516 | - | - |
+| Cohen's d (N2 vs Control) | -0.180 | 0.463 | - | - |
+| Cohen's d (N3 vs Control) | 2.788 | 0.110 | - | - |
+| Cohen's d (N4 vs Control) | 1.546 | 0.687 | - | - |
 | p | <0.001 | <0.001 | <0.001 | <0.001 |

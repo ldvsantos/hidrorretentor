@@ -5,6 +5,26 @@ Este filtro inverte a ordem para: legenda primeiro, depois imagem.
 ]]
 
 local TARGET_WIDTH = os.getenv("FIG_WIDTH") or "80%"
+local CAPTION_STYLE = os.getenv("FIG_CAPTION_STYLE") or "Legenda"
+
+local function _get_inlines(block)
+  return block.content or block.c
+end
+
+local function _caption_div_with_style(blocks)
+  local normalized = {}
+
+  for _, block in ipairs(blocks) do
+    if block and block.t == "Plain" then
+      table.insert(normalized, pandoc.Para(_get_inlines(block)))
+    else
+      table.insert(normalized, block)
+    end
+  end
+
+  local attr = pandoc.Attr("", {}, { ["custom-style"] = CAPTION_STYLE })
+  return pandoc.Div(normalized, attr)
+end
 
 local function parse_length(s)
   if type(s) ~= "string" then
@@ -41,22 +61,18 @@ function Image(img)
 end
 
 function Figure(fig)
-  -- Criar lista de blocos para retornar
+  -- Move a legenda para cima preservando o Figure original (attr/id).
+  -- Em Pandoc 3.x, fig.caption.long é uma lista de Blocks.
+
   local result = {}
-  
-  -- Adicionar a legenda como parágrafo acima
-  -- fig.caption.long contém uma lista de blocos com a legenda
+
   if fig.caption and fig.caption.long and #fig.caption.long > 0 then
-    for _, block in ipairs(fig.caption.long) do
-      table.insert(result, block)
-    end
+    table.insert(result, _caption_div_with_style(fig.caption.long))
   end
-  
-  -- Adicionar a imagem sem legenda
-  -- Criar uma nova figura sem caption, preservando atributos
-  local img_only = pandoc.Figure(fig.content, pandoc.Caption())
-  table.insert(result, img_only)
-  
-  -- Retornar os blocos na ordem: legenda, depois imagem
+
+  -- Remove a legenda do Figure para evitar duplicação (em geral o DOCX coloca abaixo)
+  fig.caption = pandoc.Caption()
+  table.insert(result, fig)
+
   return result
 end
