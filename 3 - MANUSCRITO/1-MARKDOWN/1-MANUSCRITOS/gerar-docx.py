@@ -202,20 +202,22 @@ def main():
         csl_file = None
         print("⚠️  Aviso: CSL não encontrado, usando estilo padrão do Pandoc")
     
-    # Alvo principal: Hidrorretentor_Taboa.md
-    default_md = base_dir / "Hidrorretentor_Taboa.md"
+    # Alvos principais (PT e EN)
+    default_files = ["Hidrorretentor_Taboa.md", "Hidrorretentor_Taboa_EN.md"]
 
     # Permite: python gerar-docx.py caminho/para/arquivo.md [outro.md ...]
     md_targets: list[Path] = []
     if len(sys.argv) > 1:
         md_targets.extend(Path(arg) for arg in sys.argv[1:])
     else:
-        if default_md.exists():
-            md_targets.append(default_md)
+        for f in default_files:
+            p = base_dir / f
+            if p.exists():
+                md_targets.append(p)
 
     if not md_targets:
         print("\n❌ Erro: nenhum Markdown alvo encontrado.")
-        print(f"   Informe um arquivo .md (ex.: python gerar-docx.py {default_md_pt_controle})")
+        print(f"   Informe um arquivo .md (ex.: python gerar-docx.py Hidrorretentor_Taboa.md)")
         return 1
 
     sucessos = 0

@@ -1,35 +1,20 @@
 ﻿---
 title: "Núcleo hidrorretentor orgânico como substrato para bioengenharia dos solos"
+subtitle: "Organic water-retaining core as a substrate for soil bioengineering"
 lang: pt-BR
 toc: false
 toc-depth: 2
-number-sections: true
 link-citations: true
 reference-section-title: "Referências"
 keywords: "Geocomposto biodegradável; Typha domingensis; Retenção hídrica; Fitotoxicidade; *Eruca sativa*"
 bibliography: referencias.bib
 ---
 
-Luiz Diego Vidal Santos (b)*
+# Resumo
 
-Francisco Sandro Rodrigues Holanda (a)
+Geocompostos hidrorretentores biodegradáveis, quando associados a geossintéticos de reforço (como geogrelhas), constituem uma alternativa de Soluções Baseadas na Natureza (SbN) para a bioengenharia de solos, desde que o desempenho hidrofísico do núcleo não introduza risco de alelopatia e de supressão da fase inicial de estabelecimento. A aplicação de biomassa lignocelulósica em núcleos hidrorretentores ainda carece de validação conjunta que conecte retenção hídrica, estabilidade de matriz e bioatividade, permitindo separar modulação morfogênica de fitotoxicidade aguda. Esta pesquisa avaliou quatro formulações de núcleo à base de fibras e resíduos de Typha domingensis como substrato para cultivo de rúcula (*Eruca sativa*), comparando $N_1$ (limbo, fibras, resina e solvente), $N_2$ (sem resina), $N_3$ (resíduos vegetais com resina) e $N_4$ (resíduos e fibras sem solvente) contra controle. A formulação completa $N_1$ superou o controle em todos os indicadores morfogênicos, com germinação 5,8% superior, elongação do hipocótilo 106,6% maior, acúmulo de biomassa fresca 158,5% superior e extensão radicular 89,7% mais pronunciada, sem evidência de fitotoxicidade ou colapso de vigor. A cinética germinativa apresentou Índice de Velocidade de Germinação 12,5% superior ao controle em $N_1$, enquanto o Tempo Médio de Germinação foi 5,8% maior, refletindo embebição modulada pela matriz hidrorretentora, sem comprometimento da viabilidade final. A formulação exibiu perfil químico favorável ao estabelecimento vegetal, com pH próximo à neutralidade e disponibilidade elevada de Potássio e Fósforo Total, além de estabilidade térmica do reforço fibroso validada até 220 °C, confirmando aplicabilidade em geocompostos para revegetação sob regime de suplementação hídrica controlada.
 
-Eliana Midori Sussuchi (c)
-
-
-(a) Agronomy Engineering Department, Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil
-
-(b) Graduate Program in Intellectual Property Science, Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil
-
-(c) Chemical Engineering Department, Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil
-
-* Corresponding author: Luiz Diego Vidal Santos. Email: <vidal.center@academico.ufs.br>. ORCID: <https://orcid.org/0000-0001-8659-8557>
-
-# Resumo {.unnumbered}
-
-Geocompostos hidrorretentores biodegradáveis, quando associados a geossintéticos de reforço (como geogrelhas), constituem uma alternativa de Soluções Baseadas na Natureza (SbN) para a bioengenharia de solos, desde que o desempenho hidrofísico do núcleo não introduza risco de alelopatia e de supressão da fase inicial de estabelecimento. A aplicação de biomassa lignocelulósica em núcleos hidrorretentores ainda carece de validação conjunta que conecte retenção hídrica, estabilidade de matriz e bioatividade, permitindo separar modulação morfogênica de fitotoxicidade aguda. Esta pesquisa avaliou quatro formulações de núcleo à base de fibras e resíduos de *Typha domingensis* Pers. como substrato para cultivo de rúcula (*Eruca sativa* Mill.), comparando $N_1$ (limbo, fibras, resina e solvente), $N_2$ (sem resina), $N_3$ (resíduos vegetais com resina) e $N_4$ (resíduos e fibras sem solvente) contra controle. A formulação completa $N_1$ superou o controle em todos os indicadores morfogênicos, com germinação 5,8% superior, elongação do hipocótilo 106,6% maior, acúmulo de biomassa fresca 158,5% superior e extensão radicular 89,7% mais pronunciada, sem evidência de fitotoxicidade ou colapso de vigor. A cinética germinativa apresentou Índice de Velocidade de Germinação 12,5% superior ao controle em $N_1$, enquanto o Tempo Médio de Germinação foi 5,8% maior, refletindo embebição modulada pela matriz hidrorretentora, sem comprometimento da viabilidade final. A formulação exibiu perfil químico favorável ao estabelecimento vegetal, com pH próximo à neutralidade e disponibilidade elevada de Potássio e Fósforo Total, além de estabilidade térmica do reforço fibroso validada até 220 °C, confirmando aplicabilidade em geocompostos para revegetação sob regime de suplementação hídrica controlada.
-
-## Palavras-chave {.unnumbered}
+## Palavras-chave
 
 Geocomposto biodegradável; *Typha domingensis*; retenção hídrica; fitotoxicidade; *Eruca sativa*.
 
@@ -39,7 +24,7 @@ Na engenharia geoambiental, o desenvolvimento de compósitos orgânicos de base 
 
 O desempenho de geocompostos hidrorretentores resulta do acoplamento entre filtração, retenção de água e estabilidade mecânica, com controle simultâneo de fluxo e suporte estrutural quando a disponibilidade hídrica é intermitente [@koerner2012_designing; @cislaghi2020_biodegradable]. Sistemas com frações sintéticas podem atingir metas de desempenho, porém a persistência ambiental e o descarte passam a integrar o problema de engenharia, o que justifica a substituição por biopolímeros e reforços vegetais que preservem integridade operacional na janela crítica de estabelecimento e, em seguida, degradem de forma compatível com o meio [@daria2020_characteristics; @Giupponi2019HowProposals]. Em paralelo, a biota associada ao sistema reconfigura propriedades físicas e químicas do microambiente, de modo que a resposta final emerge do acoplamento material, microbiota e substrato, com implicações para uniformidade de crescimento e supressão biológica sob flutuação climática [@abis2020_reduced; @haiming2020_microbial].
 
-Fibras de *Typha domingensis* Pers. apresentam aderência tecnológica ao problema por oferecerem frações lignocelulósicas com potencial de manufatura de geotêxteis, permitindo escalabilidade e controle de processo [@ghosh2009_suitability]. A espécie é uma macrófita emergente associada a ambientes úmidos e alagáveis, nos quais oscilações de oxigenação e saturação são recorrentes, e sua anatomia com aerênquima sustenta difusão interna de gases sob hipóxia, característica que indica resiliência funcional em interfaces solo água [@kamali2022_typha; @cunhacruzy2020_rootanatomy]. No domínio de materiais, a elevada fração de celulose e lignina contribui para rigidez e resistência à tração, favorecendo a manutenção de uma arquitetura porosa estável quando incorporada a compósitos, enquanto sua tolerância a estresses e emprego em fitorremediação ampliam a aplicabilidade em cenários de alta variabilidade ambiental [@sujatha2022_cellulose; @deguenon2022_influence; @hegazy2011_phytoremediation].
+Fibras de *Typha domingensis* apresentam aderência tecnológica ao problema por oferecerem frações lignocelulósicas com potencial de manufatura de geotêxteis, permitindo escalabilidade e controle de processo [@ghosh2009_suitability]. A espécie é uma macrófita emergente associada a ambientes úmidos e alagáveis, nos quais oscilações de oxigenação e saturação são recorrentes, e sua anatomia com aerênquima sustenta difusão interna de gases sob hipóxia, característica que indica resiliência funcional em interfaces solo água [@kamali2022_typha; @cunhacruzy2020_rootanatomy]. No domínio de materiais, a elevada fração de celulose e lignina contribui para rigidez e resistência à tração, favorecendo a manutenção de uma arquitetura porosa estável quando incorporada a compósitos, enquanto sua tolerância a estresses e emprego em fitorremediação ampliam a aplicabilidade em cenários de alta variabilidade ambiental [@sujatha2022_cellulose; @deguenon2022_influence; @hegazy2011_phytoremediation].
 
 O uso de biomassa lignocelulósica em núcleos hidrorretentores, entretanto, exige validação simultânea de desempenho hidrofísico e segurança química, pois metabólitos secundários podem ser lixiviados e modular o microambiente de germinação por rotas do acetato e do chiquimato, alterando crescimento inicial sem necessariamente afetar viabilidade [@cheng2015_research; @inderjit1996_phenolics]. Como *Typha domingensis* sintetiza frações fenólicas e terpênicas, a formulação precisa dissociar retenção de água e estabilidade de matriz do risco de inibição por aleloquímicos, assegurando que a funcionalidade hidráulica não introduza supressão do estabelecimento [@muzell2016_allelopathy]. Apesar de avanços recentes em geocompostos naturais para retenção hídrica [@akter2020_development; @santos2024_geogrid], permanece uma lacuna metodológica quando se exige um protocolo único que conecte propriedades do material, sorção, química do extrato e resposta biológica em germinação e morfogênese.
 
@@ -53,7 +38,7 @@ O experimento foi conduzido em uma casa de vegetação do Departamento de Engenh
 
 ## Características das sementes de rúcula
 
-As sementes de rúcula (*Eruca sativa* Mill.) utilizadas foram da cultivar Folha Larga, conforme registro no Registro Nacional de Cultivares do MAPA nº 0448 [@mapa2012_rnc_rucula]. Apresentavam pureza física de 98%, germinação padrão de 85%, umidade máxima de 10%, e comportamento germinativo típico com emergência entre 3 a 5 dias em condições ótimas [@vieira2011_qualidade].
+As sementes de rúcula (*Eruca sativa*) utilizadas foram da cultivar Folha Larga, conforme registro no Registro Nacional de Cultivares do MAPA nº 0448 [@mapa2012_rnc_rucula]. Apresentavam pureza física de 98%, germinação padrão de 85%, umidade máxima de 10%, e comportamento germinativo típico com emergência entre 3 a 5 dias em condições ótimas [@vieira2011_qualidade].
 
 Essa cultivar é reportada como responsiva a condições de manejo e disponibilidade hídrica em estágio inicial, o que justifica seu uso como espécie indicadora em triagens de bioatividade [@dijkstra2017_cultivo].
 
@@ -326,41 +311,11 @@ No ensaio em microcosmo, o efeito se manifestou de forma mais consistente em mé
 
 A aplicabilidade em bioengenharia dos solos depende da manutenção da estabilidade estrutural do compósito ao longo da janela de funcionamento, sendo recomendável ampliar a validação para condições de solo e caracterizar de modo mais resolutivo as frações solúveis e seus gradientes de concentração, mantendo rastreabilidade dos parâmetros analíticos empregados nas rotinas multivariadas para reduzir incerteza mecanística e ampliar reprodutibilidade.
 
-# Disponibilidade de dados {.unnumbered}
+# Disponibilidade de dados
 
-O conjunto de dados encontra-se disponível no repositório: <https://doi.org/10.5281/zenodo.18184021>
+O conjunto de dados encontra-se disponível no repositório: https://doi.org/10.5281/zenodo.18184021
 
-# Declaração de interesses conflitantes {.unnumbered}
-
-Os autores declaram não haver conflitos de interesse financeiros ou pessoais conhecidos que possam ter influenciado o trabalho relatado neste artigo.
-
-# Declaração de contribuição de autoria (CRediT) {.unnumbered}
-
-Jeangela Carla Rodrigues De Melo: Investigação; Curadoria de dados; Redação - rascunho original.
-
-Brenno Lima Nascimento: Investigação; Curadoria de dados.
-
-Gizelio Menezes Boge: Investigação; Curadoria de dados.
-
-Marcos Vinícius Quirino dos Santos: Investigação; Curadoria de dados.
-
-Marla Ibrahim Uehbe de Oliveira: Validação; Redação - revisão e edição.
-
-Eliana Midori Sussuchi: Conceitualização; Supervisão; Redação - revisão e edição.
-
-Francisco Sandro Rodrigues Holanda: Conceitualização; Supervisão; Redação - revisão e edição.
-
-Luiz Diego Vidal Santos: Análise formal; Visualização; Redação - rascunho original; Redação - revisão e edição.
-
-# Financiamento {.unnumbered}
-
-Esta pesquisa não recebeu financiamento específico de agências de fomento dos setores público, comercial ou sem fins lucrativos.
-
-# Agradecimentos {.unnumbered}
-
-Os autores agradecem à Universidade Federal de Sergipe (UFS) pelo suporte de infraestrutura e ao Instituto Tecnológico e de Pesquisas do Estado de Sergipe (ITPS) pelas análises químicas.
-
-# Referências {.unnumbered}
+# Referências
 
 ::: {#refs}
 :::
