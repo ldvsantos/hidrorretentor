@@ -1,10 +1,15 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+from pathlib import Path
 
 # Settings
-DATA_FILE = os.path.join('data', 'ftir_typha.csv')
-OUTPUT_FILE = 'Fig_FTIR_Typha.png'
+HERE = Path(__file__).resolve().parent
+IMG_DIR = HERE.parent / "2-IMG"
+IMG_DIR.mkdir(parents=True, exist_ok=True)
+
+DATA_FILE = str(HERE / "data" / "ftir_typha.csv")
+OUTPUT_FILE = str(IMG_DIR / "Fig_FTIR_Typha.png")
 COLOR = '#1B998B'
 
 def main():
@@ -55,9 +60,9 @@ def main():
                     ha='center')
 
     ax.set_xlim(4000, 400)
-    ax.set_xlabel('Número de Onda ($cm^{-1}$)')
-    ax.set_ylabel('Transmitância (%)')
-    ax.set_title('FTIR - Fibras de Typha domingensis')
+    ax.set_xlabel('Wavenumber ($cm^{-1}$)')
+    ax.set_ylabel('Transmittance (%)')
+    ax.set_title('FTIR - Typha domingensis Fibers')
     ax.grid(True, linestyle='--', alpha=0.5)
     
     plt.tight_layout()

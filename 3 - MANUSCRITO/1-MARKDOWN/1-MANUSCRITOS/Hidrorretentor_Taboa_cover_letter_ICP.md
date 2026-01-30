@@ -4,26 +4,22 @@
 
 To the Editor,
 
-Please consider our manuscript, **“Organic hydroretentive core as a substrate for soil bioengineering”**, for publication as an **Original Research Article** in *Industrial Crops and Products*.
+Dear Editors,
 
-In this work, we evaluate a biodegradable hydroretentive core formulated from **Typha domingensis** (leaf residues and fibers) combined with a castor oil-based polyurethane resin and natural thickeners. We provide an integrated assessment connecting (i) **materials characterization** (FTIR/TGA), (ii) **core chemistry** (pH and macronutrients), (iii) **macroscopic water sorption**, and (iv) **bioassays** for early plant establishment, including germination metrics, seedling morphometry, and a tray mesocosm. The complete formulation ($N_1$) consistently improved germination and early morphogenesis without evidence of acute phytotoxicity, supporting the use of *Typha*-based hydroretentive cores as local hydrophysical conditioners for revegetation under controlled water supplementation.
+We are pleased to submit our manuscript entitled "Organic hydroretentive core as a substrate for soil bioengineering" for consideration in Industrial Crops and Products.
 
-We believe this submission fits the scope of *Industrial Crops and Products* because it advances the sustainable use of biomass from an industrially relevant macrophyte (*Typha*) into a functional bio-based material, while explicitly addressing performance and biological safety for agronomic/geoenvironmental applications.
+This study examines the engineering of the invasive macrophyte Typha domingensis into functional hydroretentive cores for seedling support. Moving beyond simple biomass compatibility, we propose a composite framework where the lignocellulosic matrix is structured with castor oil-based polyurethane to function simultaneously as a hydraulic buffer and a biostimulant delivery system.
 
-**Declarations**
-- **Originality**: This manuscript is original, has not been published previously, and is not under consideration for publication elsewhere.
-- **Conflicts of interest**: The authors declare no competing interests.
-- **Funding**: This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
-- **Data availability**: The dataset is publicly available at Zenodo: <https://doi.org/10.5281/zenodo.18184021>
+We show that the coupling of fiber and resin (N1) optimizes the physicochemical interface, creating a neutral pH environment with high Potassium availability that acts as a "fertility island" for establishment; that the functionalized core exhibits significant hydraulic hysteresis, amplifying water retention capacity by 2.7 times compared to controls; and that survival analysis (Kaplan-Meier/Cox) confirms the absence of phytotoxicity, revealing instead a hormetic biostimulation pattern where the substrate enhances morphogenetic vigor without compromising germination kinetics.
 
-We have included the mandatory **Highlights** as a separate editable file, as required by Elsevier.
+Our manuscript contributes to the journal’s scope by offering an empirically grounded framework for valorizing Typha biomass, specifying the hydroretentive core not merely as a physical support, but as an active eco-material where functional service life and biological compatibility are treated as design parameters constrained by chemical architecture.
 
-Thank you for your consideration.
+We confirm that this work is original and not under review elsewhere, and that all authors meet the journal’s authorship criteria. Funding and data availability statements are provided in the submission files. Thank you for considering our submission.
 
 Sincerely,
-
-Luiz Diego Vidal Santos (corresponding author)
-Email: vidal.center@academico.ufs.br
+Luiz Diego Vidal Santos 
+State University of Feira de Santana (UEFS), 
+Brazil ldvsantos@uefs.br
 ORCID: 0000-0001-8659-8557
 
 ---

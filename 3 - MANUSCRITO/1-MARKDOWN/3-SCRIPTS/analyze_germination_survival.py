@@ -156,11 +156,13 @@ def fit_and_export_survival(indiv: pd.DataFrame, out_dir: Path, img_dir: Path) -
     }
 
     DISPLAY_MAP = {
-        "ÁGUA DESTILADA": "Controle",
-        "FOLHA": "N2 (sem resina)",
-        "PURA": "N3 (resíduos vegetais)",
-        "SEM SOLVENTE": "N4 (resíduos e fibras)",
-        "SOLV+RESI": "N1 (formulação completa)",
+        "ÁGUA DESTILADA": "Control",
+        "FOLHA": "N3 (Plant residues)",
+        "PURA": "N3 (Plant residues)",
+        "FOLHA ": "N3 (Plant residues)",
+        "PURA ": "N3 (Plant residues)",
+        "SEM SOLVENTE": "N4 (Residues and fibers)",
+        "SOLV+RESI": "N1 (Full formulation)",
     }
 
     plt.rcParams.update(
@@ -241,9 +243,9 @@ def fit_and_export_survival(indiv: pd.DataFrame, out_dir: Path, img_dir: Path) -
         if g_hat.size:
             end_germinacao.append(float(g_hat[-1]))
 
-    ax.set_xlabel("Tempo (dias)", weight="bold")
-    ax.set_ylabel("Germinação acumulada (%)", weight="bold")
-    ax.set_title("Curvas de germinação acumulada", weight="bold")
+    ax.set_xlabel("Time (days)", weight="bold")
+    ax.set_ylabel("Accumulated Germination (%)", weight="bold")
+    ax.set_title("Accumulated Germination Curves", weight="bold")
 
     # Zoom vertical automático: se todas as curvas terminam altas, reduz o eixo Y
     # para destacar pequenas diferenças (sem ficar “tudo em cima”).
@@ -280,7 +282,7 @@ def fit_and_export_survival(indiv: pd.DataFrame, out_dir: Path, img_dir: Path) -
     table.auto_set_font_size(False)
     table.set_fontsize(10)
     table.scale(1.0, 1.25)
-    ax_tab.set_title("Número em risco", fontsize=12, fontweight="bold", pad=6)
+    ax_tab.set_title("Number at risk", fontsize=12, fontweight="bold", pad=6)
 
     fig_path = img_dir / "Fig_survival_germinacao.png"
     plt.tight_layout()

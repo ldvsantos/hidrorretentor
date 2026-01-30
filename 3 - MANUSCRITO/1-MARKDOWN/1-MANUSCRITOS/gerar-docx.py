@@ -56,6 +56,9 @@ def gerar_docx(
         0 se sucesso, 1 se erro
     """
     print(f"\nGerando {output_file.name}...")
+
+    # Se o arquivo de saída estiver bloqueado (Word/OneDrive), gera em um nome alternativo.
+    final_output_file = output_file
     
     # Remover arquivo antigo se existir
     if output_file.exists():
@@ -70,9 +73,12 @@ def gerar_docx(
                     print(f"⚠️  Tentativa {attempt + 1}/{max_attempts}: Arquivo em uso, aguardando...")
                     time.sleep(0.6)
                 else:
+                    ts = time.strftime("%Y%m%d-%H%M%S")
+                    final_output_file = output_file.with_name(f"{output_file.stem}__REGENERATED__{ts}{output_file.suffix}")
                     print(f"❌ Erro: Não foi possível remover '{output_file.name}'.")
-                    print("   Certifique-se de que o arquivo não está aberto no Word ou OneDrive.")
-                    return 1
+                    print("   O arquivo parece estar aberto no Word/OneDrive.")
+                    print(f"➡️  Vou gerar em arquivo alternativo: {final_output_file.name}")
+                    break
     
     # Comando Pandoc
     cmd = [
@@ -128,7 +134,7 @@ def gerar_docx(
         if resource_path:
             cmd.extend(["--resource-path", resource_path])
     
-    cmd.extend(["-o", str(output_file)])
+    cmd.extend(["-o", str(final_output_file)])
 
     print("Executando Pandoc...")
     
@@ -148,10 +154,13 @@ def gerar_docx(
             print(result.stderr)
         
         # Verificar se o arquivo foi criado
-        if output_file.exists():
-            print(f"\n✅ Arquivo {output_file.name} gerado com sucesso!")
-            print(f"📍 Localização: {output_file.absolute()}")
-            print(f"📊 Tamanho: {output_file.stat().st_size / 1024:.1f} KB")
+        if final_output_file.exists():
+            if final_output_file != output_file:
+                print(f"\n✅ Arquivo gerado com sucesso (fallback)!")
+            else:
+                print(f"\n✅ Arquivo {output_file.name} gerado com sucesso!")
+            print(f"📍 Localização: {final_output_file.absolute()}")
+            print(f"📊 Tamanho: {final_output_file.stat().st_size / 1024:.1f} KB")
             return 0
         else:
             print(f"\n❌ Erro: O arquivo {output_file.name} não foi gerado!")

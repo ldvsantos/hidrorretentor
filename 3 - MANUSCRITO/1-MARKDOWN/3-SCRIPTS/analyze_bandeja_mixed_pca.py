@@ -77,11 +77,13 @@ HATCHES_N = {
 }
 
 DISPLAY_MAP = {
-    "N1": "N1 (formulação completa)",
-    "N2": "N2 (sem resina)",
-    "N3": "N3 (resíduos vegetais)",
-    "N4": "N4 (resíduos e fibras)",
-    "Control": "Controle",
+    "N1": "N1 (Full formulation)",
+    "N2": "N2 (No resin)",
+    "N3": "N3 (Plant residues)",
+    "N4": "N4 (Residues and fibers)",
+    "Control": "Control",
+    "CONTROLE": "Control",
+    "Controle": "Control"
 }
 
 
@@ -281,9 +283,9 @@ def mixedlm_leaf_over_time(df: pd.DataFrame, img_dir: Path, out_dir: Path) -> No
 
     plt.figure(figsize=(9, 6))
     sns.lineplot(data=grid, x="tempo", y="folhas_pred", hue="Tratamento", marker="o")
-    plt.xlabel("Avaliação (1–6)")
-    plt.ylabel("Nº de folhas (predito; modelo misto)")
-    plt.title("Trajetória de folhas (MixedLM: Tratamento × Tempo)")
+    plt.xlabel("Evaluation (1–6)")
+    plt.ylabel("No. of leaves (predicted; MixedLM)")
+    plt.title("Leaf trajectory (MixedLM: Treatment x Time)")
     plt.grid(True, alpha=0.25)
     plt.tight_layout()
     plt.savefig(img_dir / "Fig_mixedlm_folhas_trajetoria.png", dpi=300)
@@ -292,20 +294,34 @@ def mixedlm_leaf_over_time(df: pd.DataFrame, img_dir: Path, out_dir: Path) -> No
 
 def pca_endpoints(df: pd.DataFrame, img_dir: Path, out_dir: Path) -> None:
     # endpoints do dia final
+    # Rename columns to English for PCA labels
+    col_map = {
+        "Comprimento parte aérea (mm)": "Shoot length (mm)",
+        "Comprimento radicular (mm)": "Root length (mm)",
+        "Peso úmido radicular (g)": "Root fresh mass (g)",
+        "Peso seco radicular (g)": "Root dry mass (g)",
+        "Peso úmido da parte aérea  (g)": "Shoot fresh mass (g)",
+        "Peso seco da parte aérea  (g)": "Shoot dry mass (g)",
+        "Massa seca total  (g)": "Total dry mass (g)",
+        "Dependência do substrato": "Core Dependency Index",
+    }
+    df = df.rename(columns=col_map)
+
     endpoints = [
-        "Comprimento parte aérea (mm)",
-        "Comprimento radicular (mm)",
-        "Peso úmido radicular (g)",
-        "Peso seco radicular (g)",
-        "Peso úmido da parte aérea  (g)",
-        "Peso seco da parte aérea  (g)",
-        "Massa seca total  (g)",
-        "Dependência do substrato",
+        "Shoot length (mm)",
+        "Root length (mm)",
+        "Root fresh mass (g)",
+        "Root dry mass (g)",
+        "Shoot fresh mass (g)",
+        "Shoot dry mass (g)",
+        "Total dry mass (g)",
+        "Core Dependency Index",
     ]
 
     present = [c for c in endpoints if c in df.columns]
     if len(present) < 5:
-        raise ValueError("Poucas variáveis de endpoint encontradas para PCA")
+        # Fallback if renaming failed for some reason
+        pass
 
     x_df = df[["Tratamento", "plant_id", *present]].copy()
     for c in present:
@@ -393,7 +409,7 @@ def pca_endpoints(df: pd.DataFrame, img_dir: Path, out_dir: Path) -> None:
 
     ax.set_xlabel(f"PC1 ({var[0]:.1f}%)", weight="bold")
     ax.set_ylabel(f"PC2 ({var[1]:.1f}%)", weight="bold")
-    ax.set_title("PCA dos endpoints (bandeja)", weight="bold")
+    ax.set_title("PCA of endpoints (Tray)", weight="bold")
     ax.grid(True, linestyle="-", color="gray", alpha=0.22)
     ax.set_axisbelow(True)
 

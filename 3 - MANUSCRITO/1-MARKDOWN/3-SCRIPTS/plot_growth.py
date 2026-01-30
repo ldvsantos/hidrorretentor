@@ -20,12 +20,12 @@ HATCHES = {
 }
 
 LEGENDA_DESCRICOES = {
-    "N1": "N1 (formulação completa)",
-    "N2": "N2 (sem resina)",
-    "N3": "N3 (resíduos vegetais)",
-    "N4": "N4 (resíduos e fibras)",
-    "CONTROLE": "Controle",
-    "Controle": "Controle"
+    "N1": "N1 (Full formulation)",
+    "N2": "N2 (No resin)",
+    "N3": "N3 (Plant residues)",
+    "N4": "N4 (Residues and fibers)",
+    "CONTROLE": "Control",
+    "Controle": "Control"
 }
 
 ORDER = ["N1", "N2", "N3", "N4", "Controle"]
@@ -232,7 +232,7 @@ def plot_sheet(sheet_name, y_label, output_file, df_curr, palette=CORES_A, tag=N
             ax.set_ylim(y0, y_needed)
         
     ax.set_xticks(range(len(final_cols)))
-    labels = [c.replace("CONTROLE", "Controle") for c in final_cols]
+    labels = ["Control" if c.upper() == "CONTROLE" or c == "Controle" else c for c in final_cols]
     ax.set_xticklabels(labels, rotation=45, ha='right')
     ax.set_ylabel(y_label, color="black", weight='bold')
     
@@ -344,7 +344,7 @@ def plot_raincloud(sheet_name, y_label, output_file, df_curr, palette=CORES_A, t
         ax.scatter(x_jit, vals, s=20, alpha=0.7, color="black", edgecolor="none", zorder=3)
 
     ax.set_xticks(indices)
-    ax.set_xticklabels([k for k in unique_keys], rotation=45, ha='right')
+    ax.set_xticklabels(["Control" if k == "Controle" else k for k in unique_keys], rotation=45, ha='right')
     ax.set_ylabel(y_label, color="black", weight='bold')
     
     ax.grid(axis='y', linestyle='-', color='gray', alpha=0.3)
@@ -376,22 +376,22 @@ try:
     # Fig 7a / Fig_006: Hipocótilo (Paleta A - Pastel)
     if "COMPRIMENTO AEREO" in xl.sheet_names:
         df = pd.read_excel(root_dados, sheet_name="COMPRIMENTO AEREO")
-        plot_sheet("COMPRIMENTO AEREO", "Comprimento do hipocótilo (mm)", f"{output_dir}/Fig_006.png", df, palette=CORES_A, tag="(a)")
+        plot_sheet("COMPRIMENTO AEREO", "Hypocotyl length (mm)", f"{output_dir}/Fig_006.png", df, palette=CORES_A, tag="(a)")
 
     # Fig 7b / Fig_007: Radícula (Paleta B - Saturada)
     if "COMPRIMENTO RAIZ" in xl.sheet_names:
         df = pd.read_excel(root_dados, sheet_name="COMPRIMENTO RAIZ")
-        plot_sheet("COMPRIMENTO RAIZ", "Comprimento da radícula (mm)", f"{output_dir}/Fig_007.png", df, palette=CORES_B, tag="(b)")
+        plot_sheet("COMPRIMENTO RAIZ", "Radicle length (mm)", f"{output_dir}/Fig_007.png", df, palette=CORES_B, tag="(b)")
         
     # Fig 8a / Fig_008: Inibição Hipocótilo (Paleta A - Pastel) -> RAINCLOUD
     if "INIBIÇÃO AEREA" in xl.sheet_names:
         df = pd.read_excel(root_dados, sheet_name="INIBIÇÃO AEREA")
-        plot_raincloud("INIBIÇÃO AEREA", "Inibição do hipocótilo (%)", f"{output_dir}/Fig_008.png", df, palette=CORES_A, tag="(a)")
+        plot_raincloud("INIBIÇÃO AEREA", "Hypocotyl inhibition (%)", f"{output_dir}/Fig_008.png", df, palette=CORES_A, tag="(a)")
 
     # Fig 8b / Fig_009: Inibição Radícula (Paleta B - Saturada) -> RAINCLOUD
     if "INIBICAO RAIZ" in xl.sheet_names:
         df = pd.read_excel(root_dados, sheet_name="INIBICAO RAIZ")
-        plot_raincloud("INIBICAO RAIZ", "Inibição da radícula (%)", f"{output_dir}/Fig_009.png", df, palette=CORES_B, tag="(b)")
+        plot_raincloud("INIBICAO RAIZ", "Radicle inhibition (%)", f"{output_dir}/Fig_009.png", df, palette=CORES_B, tag="(b)")
 
 except Exception as e:
     print(f"Erro: {e}")

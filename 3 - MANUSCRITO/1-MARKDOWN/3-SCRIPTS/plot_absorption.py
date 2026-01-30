@@ -27,10 +27,10 @@ DISPLAY_LABELS = {
 }
 
 LEGEND_DESCRIPTIONS = {
-    "N1": "N1 (formulação completa)",
-    "N2": "N2 (sem resina)",
-    "N3": "N3 (resíduos vegetais)",
-    "N4": "N4 (resíduos e fibras)",
+    "N1": "N1 (Full formulation)",
+    "N2": "N2 (No resin)",
+    "N3": "N3 (Plant residues)",
+    "N4": "N4 (Residues and fibers)",
     "Control": "Control"
 }
 
@@ -343,7 +343,7 @@ try:
     # Eixos e Legenda
     ax.set_xticks(range(len(plot_order)))
     ax.set_xticklabels(tick_labels, rotation=0)
-    ax.set_ylabel("Ganho de massa hídrica (g)", color="black", weight='bold')
+    ax.set_ylabel("Water mass gain (g)", color="black", weight='bold')
     ax.set_xlabel("", color="black") # X axis label redundant with ticks
     
     # Grid apenas horizontal

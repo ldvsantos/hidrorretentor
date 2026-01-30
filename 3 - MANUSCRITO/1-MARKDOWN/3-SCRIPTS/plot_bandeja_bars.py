@@ -35,12 +35,12 @@ HATCHES = {
 }
 
 LEGENDA_DESCRICOES = {
-    "N1": "N1 (formulação completa)",
-    "N2": "N2 (sem resina)",
-    "N3": "N3 (resíduos vegetais)",
-    "N4": "N4 (resíduos e fibras)",
-    "Control": "Controle",
-    "Controle": "Controle",
+    "N1": "N1 (Full formulation)",
+    "N2": "N2 (No resin)",
+    "N3": "N3 (Plant residues)",
+    "N4": "N4 (Residues and fibers)",
+    "Control": "Control",
+    "Controle": "Control",
 }
 
 plt.rcParams.update(
@@ -264,8 +264,8 @@ def plot_dual_relative(stats_shoot: pd.DataFrame, stats_root: pd.DataFrame, out_
     fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(8, 9), sharex=True)
 
     for ax, stats, ylabel, tag in [
-        (axes[0], stats_shoot, "Comprimento relativo parte aérea (%)", "(a)"),
-        (axes[1], stats_root, "Comprimento relativo raiz (%)", "(b)"),
+        (axes[0], stats_shoot, "Relative shoot length (%)", "(a)"),
+        (axes[1], stats_root, "Relative root length (%)", "(b)"),
     ]:
         x = np.arange(len(present))
         for i, key in enumerate(present):
@@ -324,9 +324,9 @@ def plot_triple_bandeja(stats_shoot, stats_root, stats_dn, out_name):
     # (b) Raiz (Paleta B)
     # (c) DN (Paleta A)
     panels = [
-        (axes[0], stats_shoot, "Comprimento relativo parte aérea (%)", "(a)", CORES_A),
-        (axes[1], stats_root, "Comprimento relativo raiz (%)", "(b)", CORES_B),
-        (axes[2], stats_dn, "Dependência do núcleo (DN%)", "(c)", CORES_A),
+        (axes[0], stats_shoot, "Relative shoot length (%)", "(a)", CORES_A),
+        (axes[1], stats_root, "Relative root length (%)", "(b)", CORES_B),
+        (axes[2], stats_dn, "Core dependency (DN%)", "(c)", CORES_A),
     ]
 
     for ax, stats, ylabel, tag, palette in panels:

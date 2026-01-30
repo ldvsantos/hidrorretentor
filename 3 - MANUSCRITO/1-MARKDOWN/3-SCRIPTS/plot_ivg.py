@@ -7,7 +7,7 @@ CORES_PASTEL = {
     "N2": "#A8D8EA",           # Blue
     "N3": "#FFCDB2",           # Peach
     "N4": "#D4A5A5",           # Pink
-    "Controle": "#FFF4A3"      # Yellow
+    "Control": "#FFF4A3"      # Yellow
 }
 
 HATCHES = {
@@ -15,14 +15,14 @@ HATCHES = {
     "N2": "+++",
     "N3": "OO",
     "N4": "...",
-    "Controle": ""
+    "Control": ""
 }
 
 # Dados da Tabela 1 manual (IVG)
 # N1, N2, N3, N4, Controle
-labels = ["Controle", "N1", "N2", "N3", "N4"] # Ordem visual
+labels = ["Control", "N1", "N2", "N3", "N4"] # Ordem visual
 # Mapping labels to keys
-keys = ["Controle", "N1", "N2", "N3", "N4"]
+keys = ["Control", "N1", "N2", "N3", "N4"]
 
 # Values from Table 1
 means = [1.933, 2.045, 1.899, 2.002, 1.989]
@@ -92,7 +92,7 @@ for i, treat in enumerate(keys):
 
 ax.set_xticks(range(len(labels)))
 ax.set_xticklabels(labels, rotation=45, ha='right') # N1-N4 labels
-ax.set_ylabel("Índice de Velocidade de Germinação (IVG)", color="black", weight='bold')
+ax.set_ylabel("Germination Speed Index (GSI)", color="black", weight='bold')
 
 ax.grid(axis='y', linestyle='-', color='gray', alpha=0.3)
 ax.set_axisbelow(True)

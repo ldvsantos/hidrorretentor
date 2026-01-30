@@ -81,10 +81,10 @@ DISPLAY_MAP = {
 }
 
 LEGENDA_DESCRICOES = {
-    "N1": "N1 (formulação completa)",
-    "N2": "N2 (sem resina)",
-    "N3": "N3 (resíduos vegetais)",
-    "N4": "N4 (resíduos e fibras)",
+    "N1": "N1 (Full formulation)",
+    "N2": "N2 (No resin)",
+    "N3": "N3 (Plant residues)",
+    "N4": "N4 (Residues and fibers)",
     "Control": "Control"
 }
 
@@ -216,10 +216,10 @@ def process_file_growth():
     
     # Sheets to process
     configs = [
-        {"sheet": "COMPRIMENTO AEREO", "ylabel": "Comprimento do hipocótilo (mm)", "out": "Fig_006.png"},
-        {"sheet": "COMPRIMENTO RAIZ", "ylabel": "Comprimento da radícula (mm)", "out": "Fig_007.png"},
-        {"sheet": "INIBIÇÃO AEREA", "ylabel": "Inibição do hipocótilo (%)", "out": "Fig_008.png"},
-        {"sheet": "INIBICAO RAIZ", "ylabel": "Inibição da radícula (%)", "out": "Fig_009.png"}
+        {"sheet": "COMPRIMENTO AEREO", "ylabel": "Hypocotyl length (mm)", "out": "Fig_006.png"},
+        {"sheet": "COMPRIMENTO RAIZ", "ylabel": "Radicle length (mm)", "out": "Fig_007.png"},
+        {"sheet": "INIBIÇÃO AEREA", "ylabel": "Hypocotyl inhibition (%)", "out": "Fig_008.png"},
+        {"sheet": "INIBICAO RAIZ", "ylabel": "Radicle inhibition (%)", "out": "Fig_009.png"}
     ]
     
     try:
@@ -307,7 +307,7 @@ def process_file_ivg():
         ax.set_xticks(range(len(treats)))
         axis_labels = [DISPLAY_MAP.get(lbl, lbl) for lbl in treats]
         ax.set_xticklabels(axis_labels, rotation=0)
-        ax.set_ylabel("IVG", weight="bold")
+        ax.set_ylabel("Germination Speed Index (GSI)", weight="bold")
         legend_order = [lbl for lbl in ["N1", "N2", "N3", "N4", "Control"] if lbl in [DISPLAY_MAP.get(x, x) for x in treats]]
         adicionar_legenda(ax, legend_order)
         
